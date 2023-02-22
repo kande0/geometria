@@ -6,7 +6,11 @@ public class Circulo_CBE extends FiguraGeometrica_CBE {
 	
 	public Circulo_CBE(double r, String tipoFigura) {
 		super(tipoFigura);
-		radio = r;
+		if (r < 0) {
+                    radio = Math.abs(r);
+                } else {
+                radio = r;
+                }
 	}
 
 	@Override
